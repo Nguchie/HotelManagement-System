@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE446E7D-DDCD-423E-A1BB-FB9F56CCB86D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>HotelManagement.My.MyApplication</StartupObject>
+    <RootNamespace>HotelManagement</RootNamespace>
+    <AssemblyName>HotelManagement</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HotelManagement.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HotelManagement.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.11\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="config\connection.vb" />
+    <Compile Include="config\crud.vb" />
+    <Compile Include="config\functions.vb" />
+    <Compile Include="config\mod_Rooms.vb" />
+    <Compile Include="config\select.vb" />
+    <Compile Include="config\usable_function.vb" />
+    <Compile Include="config\user.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmAutonumber.Designer.vb">
+      <DependentUpon>frmAutonumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmAutonumber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmBooking.Designer.vb">
+      <DependentUpon>frmBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmBookingDetails.Designer.vb">
+      <DependentUpon>frmBookingDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmBookingDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmBookingList.Designer.vb">
+      <DependentUpon>frmBookingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmBookingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmGuest.Designer.vb">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmGuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmReserve.Designer.vb">
+      <DependentUpon>frmReserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmReserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmReservedRoom.Designer.vb">
+      <DependentUpon>frmReservedRoom.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmReservedRoom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmDates.Designer.vb">
+      <DependentUpon>frmDates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmDates.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopGuest.Designer.vb">
+      <DependentUpon>frmPopGuest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopGuest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopPayment.Designer.vb">
+      <DependentUpon>frmPopPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Maintenance\frmAddons.Designer.vb">
+      <DependentUpon>frmAddons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Maintenance\frmAddons.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Maintenance\frmRoomType.designer.vb">
+      <DependentUpon>frmRoomType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Maintenance\frmRoomType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRoomList.Designer.vb">
+      <DependentUpon>frmRoomList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRoomList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frmRooms.Designer.vb">
+      <DependentUpon>frmRooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frmRooms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopAdons.Designer.vb">
+      <DependentUpon>frmPopAdons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopAdons.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopPaymentsReserve.Designer.vb">
+      <DependentUpon>frmPopPaymentsReserve.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopPaymentsReserve.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopRPayment.Designer.vb">
+      <DependentUpon>frmPopRPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmPopRPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmViewBookRooms.Designer.vb">
+      <DependentUpon>frmViewBookRooms.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Pop-Up\frmViewBookRooms.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Reports\frmReciept.Designer.vb">
+      <DependentUpon>frmReciept.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Reports\frmReciept.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Reports\frmReporting.Designer.vb">
+      <DependentUpon>frmReporting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Reports\frmReporting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\Reports\frmReports.Designer.vb">
+      <DependentUpon>frmReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\Reports\frmReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\user.designer.vb">
+      <DependentUpon>user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="forms\user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRMlOGIN.Designer.vb">
+      <DependentUpon>FRMlOGIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FRMlOGIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmAutonumber.resx">
+      <DependentUpon>frmAutonumber.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmBooking.resx">
+      <DependentUpon>frmBooking.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmBookingDetails.resx">
+      <DependentUpon>frmBookingDetails.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmBookingList.resx">
+      <DependentUpon>frmBookingList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmGuest.resx">
+      <DependentUpon>frmGuest.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmReserve.resx">
+      <DependentUpon>frmReserve.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmReservedRoom.resx">
+      <DependentUpon>frmReservedRoom.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Maintenance\frmAddons.resx">
+      <DependentUpon>frmAddons.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Maintenance\frmRoomType.resx">
+      <DependentUpon>frmRoomType.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRoomList.resx">
+      <DependentUpon>frmRoomList.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frmRooms.resx">
+      <DependentUpon>frmRooms.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Pop-Up\frmDates.resx">
+      <DependentUpon>frmDates.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Pop-Up\frmPopAdons.resx">
+      <DependentUpon>frmPopAdons.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Pop-Up\frmPopGuest.resx">
+      <DependentUpon>frmPopGuest.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Pop-Up\frmPopPayment.resx">
+      <DependentUpon>frmPopPayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Pop-Up\frmPopPaymentsReserve.resx">
+      <DependentUpon>frmPopPaymentsReserve.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Pop-Up\frmPopRPayment.resx">
+      <DependentUpon>frmPopRPayment.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Pop-Up\frmViewBookRooms.resx">
+      <DependentUpon>frmViewBookRooms.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Reports\frmReciept.resx">
+      <DependentUpon>frmReciept.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Reports\frmReporting.resx">
+      <DependentUpon>frmReporting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\Reports\frmReports.resx">
+      <DependentUpon>frmReports.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\user.resx">
+      <DependentUpon>user.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRMlOGIN.resx">
+      <DependentUpon>FRMlOGIN.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginCLIP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoutCLIP.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
